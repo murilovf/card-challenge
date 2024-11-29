@@ -1,7 +1,7 @@
 package com.klab.cardchallenge.exceptions;
 
-public class GameNotFoundException extends RuntimeException {
-    public GameNotFoundException(String message) {
+public class GameAlreadyFinishedException extends RuntimeException {
+    public GameAlreadyFinishedException(String message) {
         super(message);
     }
 }

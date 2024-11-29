@@ -1,4 +1,7 @@
 package com.klab.cardchallenge.dto;
 
-public class PlayerDTO {
+public record PlayerDTO(
+        String name,
+        String gameId
+) {
 }

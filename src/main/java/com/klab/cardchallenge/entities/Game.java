@@ -19,11 +19,17 @@ public class Game {
     @Column(name = "cards_per_hand", nullable = false)
     private Integer cardsPerHand;
 
-    @OneToMany(mappedBy = "game", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "game", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Player> players;
+
+    @OneToMany(mappedBy = "game", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private List<GameWinners> gameWinners;
 
     @Column(name = "created_at", nullable = false)
     private LocalDateTime creationDate;
+
+    @Column(name = "finished_at")
+    private LocalDateTime finishDate;
 
     public Game(String deckId, Integer numberOfPlayers, Integer cardsPerHand, List<Player> players, LocalDateTime creationDate) {
         this.deckId = deckId;
@@ -34,4 +40,64 @@ public class Game {
     }
 
     public Game() {}
+
+    public Game(String deckId) {
+        this.deckId = deckId;
+    }
+
+    public void setFinishDate(LocalDateTime finishDate) {
+        this.finishDate = finishDate;
+    }
+
+    public List<Player> getPlayers() {
+        return players;
+    }
+
+    public void setGameWinners(List<GameWinners> gameWinners) {
+        this.gameWinners = gameWinners;
+    }
+
+    public String getDeckId() {
+        return deckId;
+    }
+
+    public void setDeckId(String deckId) {
+        this.deckId = deckId;
+    }
+
+    public Integer getNumberOfPlayers() {
+        return numberOfPlayers;
+    }
+
+    public void setNumberOfPlayers(Integer numberOfPlayers) {
+        this.numberOfPlayers = numberOfPlayers;
+    }
+
+    public void setPlayers(List<Player> players) {
+        this.players = players;
+    }
+
+    public Integer getCardsPerHand() {
+        return cardsPerHand;
+    }
+
+    public void setCardsPerHand(Integer cardsPerHand) {
+        this.cardsPerHand = cardsPerHand;
+    }
+
+    public List<GameWinners> getGameWinners() {
+        return gameWinners;
+    }
+
+    public LocalDateTime getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(LocalDateTime creationDate) {
+        this.creationDate = creationDate;
+    }
+
+    public LocalDateTime getFinishDate() {
+        return finishDate;
+    }
 }

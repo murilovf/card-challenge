@@ -1,4 +1,4 @@
-package com.klab.cardchallenge.responses;
+package com.klab.cardchallenge.responses.deckapi;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

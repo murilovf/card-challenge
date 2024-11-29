@@ -1,16 +1,16 @@
 package com.klab.cardchallenge.integration.deckapi;
 
-import com.klab.cardchallenge.responses.DrawCardResponse;
-import com.klab.cardchallenge.responses.NewDeckResponse;
+import com.klab.cardchallenge.responses.deckapi.DrawCardResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
+@Component
 public class CardIntegration {
     @Value("${deck.api.url}")
     private String urlDeckApi;
@@ -19,7 +19,7 @@ public class CardIntegration {
 
     public DrawCardResponse draw(String deckId, Integer count) {
         String url = UriComponentsBuilder.fromHttpUrl(urlDeckApi)
-                .path("/{deckId}/draw")
+                .path("/{deckId}/draw/")
                 .queryParam("count", count)
                 .buildAndExpand(deckId)
                 .toUriString();
@@ -35,7 +35,7 @@ public class CardIntegration {
                             DrawCardResponse.class);
 
             return responseEntity.getBody();
-        } catch (HttpClientErrorException e) {
+        } catch (Exception e) {
             throw new RuntimeException("Erro ao buscar cursos da API: " + e.getMessage());
         }
     }

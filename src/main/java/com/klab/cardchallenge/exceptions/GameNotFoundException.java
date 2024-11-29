@@ -1,7 +1,7 @@
 package com.klab.cardchallenge.exceptions;
 
-public class InvalidNumberCardsException extends RuntimeException {
-    public InvalidNumberCardsException(String message) {
+public class GameNotFoundException extends RuntimeException {
+    public GameNotFoundException(String message) {
         super(message);
     }
 }

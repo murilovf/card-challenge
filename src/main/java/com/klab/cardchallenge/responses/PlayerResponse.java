@@ -1,4 +1,10 @@
 package com.klab.cardchallenge.responses;
 
-public record PlayerResponse() {
+import java.util.List;
+
+public record PlayerResponse(
+        String name,
+        List<String> cards,
+        Integer score
+) {
 }

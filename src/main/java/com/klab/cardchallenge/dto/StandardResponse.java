@@ -1,14 +1,14 @@
-package com.klab.cardchallenge.exceptions;
+package com.klab.cardchallenge.dto;
 
 import java.time.LocalDateTime;
 
-public class StandardErrorResponse {
+public class StandardResponse {
     private boolean success;
     private String message;
     private int statusCode;
     private LocalDateTime timestamp;
 
-    public StandardErrorResponse(boolean success, String message, int statusCode) {
+    public StandardResponse(boolean success, String message, int statusCode) {
         this.success = success;
         this.message = message;
         this.statusCode = statusCode;
