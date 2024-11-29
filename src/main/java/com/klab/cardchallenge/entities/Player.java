@@ -1,7 +1,7 @@
 package com.klab.cardchallenge.entities;
 
 import com.klab.cardchallenge.dto.Card;
-import com.klab.cardchallenge.utils.CardMapper;
+import com.klab.cardchallenge.mappers.CardMapper;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -45,6 +45,10 @@ public class Player {
     }
 
     public Player() { }
+
+    public Player(String name) {
+        this.name = name;
+    }
 
     public List<Card> getCards() {
         if (cards == null) {

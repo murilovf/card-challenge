@@ -9,7 +9,7 @@ import com.klab.cardchallenge.integration.deckapi.ShuffleIntegration;
 import com.klab.cardchallenge.repositories.GameRepository;
 import com.klab.cardchallenge.responses.GameResponse;
 import com.klab.cardchallenge.responses.deckapi.NewDeckResponse;
-import com.klab.cardchallenge.utils.GameMapper;
+import com.klab.cardchallenge.mappers.GameMapper;
 import com.klab.cardchallenge.utils.ValidationUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -75,7 +75,7 @@ public class GameService {
         return GameMapper.toGameResponse(gameSaved);
     }
 
-    private Game updateFinishData(Game game) {
+    public Game updateFinishData(Game game) {
         game.setFinishDate(LocalDateTime.now());
         gameRepository.save(game);
 

@@ -1,4 +1,4 @@
-package com.klab.cardchallenge.utils;
+package com.klab.cardchallenge.mappers;
 
 import com.klab.cardchallenge.entities.Game;
 import com.klab.cardchallenge.responses.GameResponse;
