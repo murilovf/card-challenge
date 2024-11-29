@@ -6,6 +6,6 @@ public record NewDeckResponse(
         @JsonProperty("success") boolean success,
         @JsonProperty("deck_id") String deckId,
         @JsonProperty("remaining") Integer remaining,
-        @JsonProperty("shuffled") Integer shuffled
+        @JsonProperty("shuffled") boolean shuffled
 ) {
 }
