@@ -1,12 +1,8 @@
 package com.klab.cardchallenge.utils;
 
-import com.klab.cardchallenge.entities.Card;
 import com.klab.cardchallenge.entities.Game;
-import com.klab.cardchallenge.enums.CardValue;
-import com.klab.cardchallenge.enums.Suit;
 import com.klab.cardchallenge.responses.GameResponse;
 import com.klab.cardchallenge.responses.PlayerResponse;
-import com.klab.cardchallenge.responses.deckapi.CardResponse;
 
 import java.util.List;
 import java.util.stream.Collectors;

@@ -1,6 +1,6 @@
 package com.klab.cardchallenge.utils;
 
-import com.klab.cardchallenge.entities.Card;
+import com.klab.cardchallenge.dto.Card;
 import com.klab.cardchallenge.enums.CardValue;
 import com.klab.cardchallenge.enums.Suit;
 import com.klab.cardchallenge.responses.deckapi.CardResponse;

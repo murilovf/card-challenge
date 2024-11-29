@@ -1,5 +1,6 @@
 package com.klab.cardchallenge.entities;
 
+import com.klab.cardchallenge.dto.Card;
 import com.klab.cardchallenge.utils.CardMapper;
 import jakarta.persistence.*;
 
@@ -34,12 +35,13 @@ public class Player {
     @Transient
     private List<Card> cards;
 
-    public Player(Long id, String name, List<String> cardIds, Game game, Integer score) {
+    public Player(Long id, String name, List<String> cardIds, Game game) {
         this.id = id;
         this.name = name;
         this.cardIds = cardIds;
         this.game = game;
-        this.score = score;
+        this.cards = getCards();
+        this.score = getScore();
     }
 
     public Player() { }
@@ -93,5 +95,9 @@ public class Player {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Game getGame() {
+        return game;
     }
 }

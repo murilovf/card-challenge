@@ -1,4 +1,4 @@
-package com.klab.cardchallenge.entities;
+package com.klab.cardchallenge.dto;
 
 import com.klab.cardchallenge.enums.CardValue;
 import com.klab.cardchallenge.enums.Suit;

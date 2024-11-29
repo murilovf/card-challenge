@@ -3,6 +3,7 @@ package com.klab.cardchallenge.entities;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -20,10 +21,10 @@ public class Game {
     private Integer cardsPerHand;
 
     @OneToMany(mappedBy = "game", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<Player> players;
+    private List<Player> players = new ArrayList<>();
 
     @OneToMany(mappedBy = "game", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private List<GameWinners> gameWinners;
+    private List<GameWinners> gameWinners = new ArrayList<>();
 
     @Column(name = "created_at", nullable = false)
     private LocalDateTime creationDate;
