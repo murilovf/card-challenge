@@ -6,12 +6,14 @@ import com.klab.cardchallenge.responses.GameResponse;
 import com.klab.cardchallenge.responses.PlayerResponse;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+@SpringBootTest
 public class GameMapperTest {
 
     @Test

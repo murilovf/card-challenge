@@ -5,11 +5,13 @@ import com.klab.cardchallenge.enums.CardValue;
 import com.klab.cardchallenge.enums.Suit;
 import com.klab.cardchallenge.responses.deckapi.CardResponse;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@SpringBootTest
 public class CardMapperTest {
 
     @Test
