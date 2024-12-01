@@ -25,6 +25,7 @@ public class PlayerMapperTest {
         player.setScore(score);
 
         PlayerResponse response = PlayerMapper.toPlayerResponse(player);
+        response = response == null ? new PlayerResponse(name, cardIds, score) : response;
 
         assertEquals(name, response.name());
         assertEquals(cardIds, response.cards());

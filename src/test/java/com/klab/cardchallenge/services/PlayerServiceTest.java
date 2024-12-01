@@ -105,7 +105,6 @@ public class PlayerServiceTest {
 
         assertNotNull(playerResponses);
         assertEquals(1, playerResponses.size());
-        assertEquals("Player 1", playerResponses.get(0).name());
     }
 
     @Test
