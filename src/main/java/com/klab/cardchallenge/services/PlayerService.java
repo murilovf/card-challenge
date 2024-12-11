@@ -63,7 +63,7 @@ public class PlayerService {
 
         //Percorre essa lista vazia preenchendo com as informações de cada jogador
         players.stream().forEach(player -> {
-            player.setName("Player " + players.indexOf(player) + 1);
+            player.setName("Player" + (players.indexOf(player) + 1));
             drawCardsToPlayer(deckId, gameRequest.cardsPerHand(), player);
         });
 
