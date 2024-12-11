@@ -3,14 +3,15 @@ package com.klab.cardchallenge.mappers;
 import com.klab.cardchallenge.entities.Player;
 import com.klab.cardchallenge.responses.PlayerResponse;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 public class PlayerMapperTest {
 
     @Test

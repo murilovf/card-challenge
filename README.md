@@ -112,7 +112,7 @@ cd <nome-do-projeto>
 Compile o projeto:
 
 ```bash
-mvn install -DskipTests
+mvn clean install
 ```
 
 Execute a aplicação no Docker:

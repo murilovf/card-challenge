@@ -5,15 +5,16 @@ import com.klab.cardchallenge.entities.Player;
 import com.klab.cardchallenge.responses.GameResponse;
 import com.klab.cardchallenge.responses.PlayerResponse;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 public class GameMapperTest {
 
     @Test
