@@ -46,7 +46,7 @@ O objetivo deste projeto é desenvolver uma aplicação Java Spring que permita 
 {
     "cardsPerHand" : 3,
     "numberPlayers" : 10,
-    "createPlayers" : false
+    "withPlayers" : false
 }
 ```
 **Descrição:**
@@ -112,7 +112,7 @@ cd <nome-do-projeto>
 Compile o projeto:
 
 ```bash
-mvn clean install
+mvn install -DskipTests
 ```
 
 Execute a aplicação no Docker:
